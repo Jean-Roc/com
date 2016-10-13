@@ -1,32 +1,32 @@
-Nom	nbr
-QGIS Desktop	26
-PostGIS	13
-IGNMap	6
-ITN Converter	4
-POI Loader	4
-GPS Babel	3
-GeoKettle	3
-Lizmap	3
-POI Edit	3
-QGIS WebClient 	3
-Circé (IGN)	2
-JOSM	2
-LeafletJS	2
-Map Source 	2
-SketchUp	2
-GHPX file editor	1
-GPSMadedit	1
-Garmin Express	1
-GeoExt (extJS)	1
-Geoserver	1
-Geosetter	1
-Locus	1
-MapServer	1
-Mobops (SDIS 71)	1
-OpenJump	1
-Openlayers	1
-Qcad	1
-Remocra	1
-TileMill	1
-geosdisv2(SDIS71)	1
-pmapper	1
+Nom,nbr
+QGIS Desktop,26
+PostGIS,13
+IGNMap,6
+ITN Converter,4
+POI Loader,4
+GPS Babel,3
+GeoKettle,3
+Lizmap,3
+POI Edit,3
+QGIS WebClient ,3
+CircÃ© (IGN),2
+JOSM,2
+LeafletJS,2
+Map Source ,2
+SketchUp,2
+GHPX file editor,1
+GPSMadedit,1
+Garmin Express,1
+GeoExt (extJS),1
+Geoserver,1
+Geosetter,1
+Locus,1
+MapServer,1
+Mobops (SDIS 71),1
+OpenJump,1
+Openlayers,1
+Qcad,1
+Remocra,1
+TileMill,1
+geosdisv2(SDIS71),1
+pmapper,1
