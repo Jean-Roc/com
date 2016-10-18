@@ -41,16 +41,15 @@ class: center, middle
 
 # Le libre et les SIG
 
-## Evolutions et actualités
+## Présentation et tour d'horizon
 
 ---
 
 # Plan
 
-1. Définition et historique
-2. Les licences
-3. La pile applicative
-4. Migration
+1. Les logiciels libres
+2. La pile applicative
+3. Exemples d'utilisation
 
 ---
 
@@ -58,42 +57,153 @@ class: center, middle
 
 Jean-Roc Morreale
 
-+ Chargé des Systèmes d'Informations au sein d'une Direction Archéologique d'un ~~Conseil Général~~ Département
 + Membre de l'OSGEO / OSGEO-fr
 + Contributeur QGIS (traduction, documentation)
++ Chargé des Systèmes d'Informations au sein d'une Direction Archéologique d'un ~~Conseil Général~~ Département
 
 ---
 
-# Définition
+# Les logiciels libres
 
-+ 4 grands principes
+## Historique général
+
+
+Au début, c'était presque simple
+
+.center[![IBM704](./illustrations/406-IBM_704_mainframe.gif)]
+
+???
+
++ les constructeurs louent plus qu'ils ne vendent leurs machines
++ les logiciels et leurs sources sont livrés avec
++ ils encouragent la création de communautés et la redistribution
++ la raison ? le but est de vendre des machines très onéreuses, pas les logiciels
 
 ---
 
-# Historique général
-.left-column[
-+ Berkeley
-+ Stallman
-+ Aujourd'hui
-]
+## Historique général
 
-.right-column[
-]
+Puis avec la miniaturisation et l'informatique personnelle vint l'ère du logiciel propriétaire
+
+.center[![IBMPC](./illustrations/Ibm_pc_5150_reduit.jpg)]
+
+???
+
+* à partir des années 70, changement de ton
+* l'ordinateur se vend en masse, le logiciel se vend séparément
+* l'utilisateur final est le client
+* les logiciels ne sont plus accompagnés de leurs sources
+
 ---
 
-# Historique spécifique au SIG
+## Historique général
 
-+ GRASS
-+ OGC
-+ OSGEO
+Qui entraîne en réaction l'apparition des concepts de logiciels **opensource** et **libres**
+
+.center[![OSI]()]
+.center[![GNU]()]
+
+???
+
+* Stallman et son pilote d'imprimante
+* fondation du projet GNU et de la FSF
+
+---
+
+## Historique général
+
+Aujourd'hui, l'enjeu c'est les services
+
+.center[![CLOUD]()]
+
+???
+
++ ce n'est plus tellement les logiciels que vous lancez sur votre ordinateur mais les services auquels vous accéder
++ ces services peuvent être des boîtes noires (facebook, google, etc.)
+
+---
+
+## Qu'est-ce qu'un logiciel propriétaire ?
+
+C'est un logiciel dont le propriétaire à l'usage **exclusif** de tous les droits.
+
+L'utilisateur a uniquement les droits que le propriétaire lui concéde.
+
+
+???
+
++ le propriétaire décide
+  + des conditions d'utilisation (nombre de postes autorisés, le cadre commercial ou pas, etc.)
+  + de l'accès au code source et de ce qui peut en être fait
++ là où ça coince
+  + dépendance envers un seul éditeur, exemples ESRI
+  + sécurité, exemple de la NSA et RSA
+  + pérennité, exemples ESRI
+
+---
+
+## Qu'est-ce qu'un logiciel libre ?
+
+C'est un ensemble de 4 libertés :
+
++ d'utilisation
++ de copier
++ d'étudier
++ de modifier et de redistribuer
+
+???
+
++ http://www.livretdulibre.org/
++ licence d'un logiciel propriétaire = liste de restrictions
+* licence d'un logiciel libre = liste de possibilités
 
 ---
 
 # Les licences
 
-+ BSD 
-+ MIT
-+ GPL
+.center[BSD/MIT]
+
+---
+
+# Les licences
+
+.center[GPL]
+
+---
+
+# Historique spécifique au SIG
+
+.center[GRASS]
+
+
+???
+
++ un des premiers SIG
++ début universitaire
++ repris par l'armée américaine
+
+---
+
+# Historique spécifique au SIG
+
+.center[OGC]
+
+???
+
++ issu l'Open Grass Fondation
++ réunit tout les éditeurs
++ produit et maintient les normes
+
+---
+
+# Historique spécifique au SIG
+
+.center[OSGEO]
+
+???
+
++ les débuts Autodesk Mapguide
++ les buts de l'asso
 
 ---
 
@@ -188,25 +298,6 @@ Jean-Roc Morreale
 + Leaflet
 + OpenLayers
 ]
-
----
-
-# Quoi de neuf sur le front logiciel ?
-
-+ Applications
-	+ QGIS3
-	+ libpostal
-	+ PostgreSQL/PostGIS
-+ Services
-	+ Tuiles vectorielles
-	+ Cezium 3D Tiles
-	+ Greyhound/Entwine
-
----
-
-# Quoi de neuf du côté des données ?
-
-+ à demander aux collègues d'OSMfr
 
 ---
 
