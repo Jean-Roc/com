@@ -5,6 +5,12 @@ GeoSDIS
 * lieu : INSET de Dunkerque
 * date : 16 novembre 2016
 
+Utilisation
+-----------
+
++ **c** pour lancer une fenêtre clonée
++ **p** pour lancer le mode présentation dans la fenêtre principale (fait apparaître les notes et le chronomètre)
+
 Tâches
 --------
 
