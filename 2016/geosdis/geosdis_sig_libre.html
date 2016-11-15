@@ -69,7 +69,7 @@ Jean-Roc Morreale
 
 ### L'ère 1950-1970
 
-.center[![IBM704](./illustrations/406-IBM_704_mainframe.gif)]
+.center[![IBM](./illustrations/ibm_mainframe.jpg)]
 
 ???
 
@@ -82,7 +82,7 @@ Jean-Roc Morreale
 
 ### L'ère 1970-2000
 
-.center[![IBMPC](./illustrations/Ibm_pc_5150_reduit.jpg)]
+.center[![IBMPC](./illustrations/ibm_pc.jpg)]
 
 ???
 
@@ -92,8 +92,6 @@ Jean-Roc Morreale
 * les logiciels ne sont plus accompagnés de leurs sources
 
 ---
-
-**opensource** et **libres**
 
 .center[![OSI_GNU](./illustrations/stallman.jpeg)]
 .center[![OSI_GNU](./illustrations/gnu_osi.png)]
@@ -277,9 +275,9 @@ C'est la notion de **copyleft**, ce qui *est* libre *reste* libre.
   + Geographic Resource Analysis Support Software 
   + date de 1982
 
-.center[![GRASS](./illustrations/)]
+.center[![GRASS](./illustrations/grass_1987.png)]
 
-.center[A voir : [GRASS, l'armée et Star Treck](https://www.youtube.com/watch?v=U3Hf0qI4JLc)]
+.center[A voir : [GRASS, l'armée et Star Trek](https://www.youtube.com/watch?v=U3Hf0qI4JLc)]
 
 ???
 
@@ -350,6 +348,17 @@ Sur tout les fronts :
 + GeoTIFF
 + Spatialite
 + Geopackage
++ GeoJSON
+
+???
+
++ des formats ouverts sont indispensables pour éviter les dépendances sur des formats propriétaires
+  + exemple de l'ECW et de son SDK
++ c'est un gage de support par un grand nombre d'appli
++ à la pointe
+  + le geotiff est le couteau suisse des rasters mais pâtit d'un support lacunaire des éditeurs proprio (crainte de brevet logiciel, version antique, etc.)
+  + spatialite, extension de sqlite, la base la plus utilisée au monde, équivalent non handicapant et moderne de la géodatabase perso esri
+  + le GeoJSON est le fruit de discussion entre une poignée de dev en 2008, standardisé en 2016, utilisé par toute les plateformes (mapbox, twitter, arcgis online, etc.)
 
 ---
 
@@ -361,6 +370,61 @@ Sur tout les fronts :
 + JTS/GEOS
 + FDO
 
+???
+
++ ce sont les briques de bases sur lesquelles s'appuient les applications
++ elles couvrent chacune un domaine fonctionnel précis
++ la somme de travail qu'elles impliquent est énorme
+  + résultats d'années d'efforts et d'un large panel de contribution
+  + même les éditeurs propriétaires y contribuent (p. ex. ESRI/BigTiff)
+
+---
+
+## Les serveurs
+
++ PostGIS
++ Geonetwork
++ Geoserver
++ Mapnik
++ MapServer
++ QGIS Server
++ MapGuide
+
+.center[![geoserver](./illustrations/geoserver_config.png)]
+
+???
+
++ supports de standards (WFS, WMS, OCW, etc.)
++ voir précurseurs (TMS)
++ interconnectables, interéchangeables (une pile postgis/mapserver/qgis ou postgis/QGIS Server/uDig ?)
++ conviennent pour une utilisation locale ou massivement distribuée
+
+---
+
+## Les clients web
+
++ Leaflet
++ OpenLayers
++ Cesium
+
+.center[![OL](./illustrations/openlayers_arcgis.png)]
+
+???
+
++ peuvent afficher tous les types de données
++ extensibles
+
+---
+
+## Les plateformes géographiques
+
++ GeoNode
++ Georchestra
+
+???
+
++ intégration directe de toutes les briques
+
 ---
 
 ## Les applications bureautiques
@@ -371,40 +435,31 @@ Sur tout les fronts :
 + GRASS
 + SAGA
 
----
+.center[![qgis_grass](./illustrations/ui_qgis_grass.png)]
 
-## Les serveurs
+???
 
-+ PostGIS
-+ Geoserver
-+ Mapnik
-+ MapServer
-+ QGIS Server
-+ MapGuide
-+ Geonetwork
++ grande diversité des applis répondant à la diversité des usages (OS, langages, outils, etc.)
++ des centaines de milliers d'utilisateurs
++ couvre les besoins du simple visualisateur aux traitements industriels
++ mise en commun des fonctions (ex. QGIS et les Traitements GRASS, SAGA, etc.)
++ ce ne sont pas des applis inférieures techniquement
 
 ---
 
-## Les clients web
-
-+ Leaflet
-+ OpenLayers
-+ Cesium
-
----
-
-## Les clients portables
+## Les applications portables
 
 + Geopaparazzi
 + Qfield
 + Roam
 
----
+.center[![ROAM](./illustrations/ui_roam.png)]
 
-## Les plateformes géographiques
+.center[A voir : [Geo-poppy](https://github.com/jancelin/geo-poppy)]
 
-+ GeoNode
-+ Georchestra
+???
+
++ Geopaparazzi/Qfield sous android, ROAM sous Windows
 
 ---
 
@@ -477,6 +532,7 @@ Sur tout les fronts :
 + la jurisprudence a établit qu'il n'y avait pas de problèmes de mise en concurrence puisque tous les prestataires peuvent proposer ce produit
 + SPL, société dont le capital appartient à un groupement de collectivités
   + exemple de SPL X-Demat
++ gros avantage, on peut vérifier si l'entreprise possède réellement l'expertise promise
 
 ---
 
@@ -518,7 +574,7 @@ utilisation de QGIS par les agents des DREAL/DDTM au lieu de MapInfo
 + mise en réseau
 + développements
 
-[geoinformations.developpement-durable.gouv.fr/](http://www.geoinformations.developpement-durable.gouv.fr/qgis-r625.html)
+.center[[geoinformations.developpement-durable.gouv.fr/](http://www.geoinformations.developpement-durable.gouv.fr/qgis-r625.html)]
 
 ???
 
@@ -536,6 +592,17 @@ utilisation de QGIS par les agents des DREAL/DDTM au lieu de MapInfo
   + nouvelles fonctionnalités (couches virtuelles)
   + correction de bugs
 
+---
+
+# Dates à retenir
+
++ **QGIS-fr**
+  + 01-02 décembre
+  + SupAgro - Montpellier
++ **FOSS4G-fr**
+  + 10-12 mai
+  + ENSG - Paris
+  
     </textarea>
     <script src="https://gnab.github.io/remark/downloads/remark-latest.min.js">
     </script>
